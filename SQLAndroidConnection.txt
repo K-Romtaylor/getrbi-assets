@@ -1,0 +1,12 @@
+1. Create libs folder in the project.
+2. Add jdts jar into it.
+3. Right Click on the jar and select add to library.
+4. Make sure you handle the firewall.
+
+Then Copy the following code:
+
+Class.forName("net.sourceforge.jtds.jdbc.Driver");
+                String connectURL = "jdbc:jtds:sqlserver://" + ip + ":" + port + ";databasename=" + db + ";user=" + username + ";password=" + password;
+
+                con = DriverManager.getConnection(connectURL);
+
